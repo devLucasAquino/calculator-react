@@ -1,4 +1,7 @@
 import OnBoard from './components/OnBoard';
+import ResultScreen from './components/ResultScreen';
+
+import { useState } from 'react';
 import './App.css';
 
 const rows = [
@@ -9,17 +12,25 @@ const rows = [
 ];
 
 function App() {
+  const [ expression, setExpression ] = useState(''); 
+
 
   function buttonSelected(rowIndex, colIndex){
     let value = rows[rowIndex][colIndex];
-    console.log(value);
-    return value;
+
+    setExpression( (prevExpression) => {
+      const updatedExpression = [ ...prevExpression , 
+        value 
+      ];
+
+        return updatedExpression;
+      
+    });
   }
-
-
 
   return (
     <>
+      <ResultScreen expression={expression}/>
       <OnBoard buttonSelected={buttonSelected}/>
     </>
   )
