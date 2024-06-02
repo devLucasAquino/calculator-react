@@ -10,20 +10,24 @@ import './App.css';
 
 function App() {
   const [ expression, setExpression ] = useState('');
-  let expressionCalc = ''; 
+
+  const [previousExpression, setPreviousExpression] = useState('');
 
 
   function buttonSelected(rowIndex, colIndex){
     let value = rows[rowIndex][colIndex];
 
-    setExpression( (prevExpression) => {
-      const updatedExpression = [ ...prevExpression , 
-        value 
-      ];
-
+    if(value === '<='){
+      setExpression(previousExpression)
+    }else{
+      setExpression( (prevExpression) => {
+        const updatedExpression = [...prevExpression,value];
+        setPreviousExpression(...updatedExpression);
         return updatedExpression;
+        
+      });
       
-    });
+    }
   }
 
   return (
