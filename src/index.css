@@ -2,6 +2,22 @@ li{
   list-style: none;
 }
 
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.App{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #9d9d9d;
+}
+
 .board{
   margin: 0;
   
@@ -11,7 +27,6 @@ li{
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #9d9d9d;
   gap: 10px;
 }
 
@@ -29,4 +44,27 @@ li{
 
 .onBoardButtons:hover{
   cursor: pointer;
+}
+
+.aux{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.screen{
+  width: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #001f00;
+}
+
+.screen > p{
+  font-size: 28px;
+  font-weight: 900;
+  color: #fbfbfb;
 }

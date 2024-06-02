@@ -28,10 +28,13 @@ function App() {
   }
 
   return (
-    <>
-      <ResultScreen expression={expression}/>
+    <div className='App'>
+      <div className='aux'>
+        <ResultScreen expression={expression}/>
+      </div>
+      
       <OnBoard buttonSelected={buttonSelected}/>
-    </>
+    </div>
   )
 }
 
