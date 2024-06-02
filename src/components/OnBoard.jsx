@@ -1,9 +1,4 @@
-const rows = [
-    ['1', '4', '7', '-'],
-    ['2', '5', '8', '*'],
-    ['3', '6', '9', '+'],
-    ['<=', '/', '^', '=']
-  ];
+import { rows } from '../data.js';
 
 export default function OnBoard({buttonSelected}){
 

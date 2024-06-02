@@ -1,15 +1,12 @@
 import OnBoard from './components/OnBoard';
 import ResultScreen from './components/ResultScreen';
 
+import { rows } from './data.js'
+
 import { useState } from 'react';
 import './App.css';
 
-const rows = [
-  ['1', '4', '7', '-'],
-  ['2', '5', '8', '*'],
-  ['3', '6', '9', '+'],
-  ['<=', '/', '^', '=']
-];
+
 
 function App() {
   const [ expression, setExpression ] = useState(''); 
