@@ -15,6 +15,8 @@ function App() {
   function buttonSelected(rowIndex, colIndex){
     let value = rows[rowIndex][colIndex];
 
+    console.log(`${colIndex} && ${rowIndex}`)
+
     setExpression( (prevExpression) => {
       const updatedExpression = [ ...prevExpression , 
         value 
