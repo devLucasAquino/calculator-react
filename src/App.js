@@ -11,18 +11,16 @@ import './App.css';
 function App() {
   const [ expression, setExpression ] = useState('');
 
-  const [previousExpression, setPreviousExpression] = useState('');
-
 
   function buttonSelected(rowIndex, colIndex){
     let value = rows[rowIndex][colIndex];
 
     if(value === '<='){
-      setExpression(previousExpression)
+      setExpression(expression.slice(0, -1));
+
     }else{
       setExpression( (prevExpression) => {
         const updatedExpression = [...prevExpression,value];
-        setPreviousExpression(...updatedExpression);
         return updatedExpression;
         
       });
