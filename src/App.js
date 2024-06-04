@@ -1,7 +1,7 @@
 import OnBoard from './components/OnBoard';
 import ResultScreen from './components/ResultScreen';
 
-import { rows } from './data.js'
+import { rows } from './data.jsx'
 
 import { useState } from 'react';
 import './App.css';

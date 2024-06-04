@@ -1,4 +1,4 @@
-import { rows } from '../data.js';
+import { rows } from '../data.jsx';
 
 export default function OnBoard({buttonSelected}){
 
