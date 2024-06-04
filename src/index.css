@@ -7,6 +7,7 @@ body{
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-image: linear-gradient(to bottom right, #13293d, #006494);
 }
 
 .App{
@@ -59,11 +60,11 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #001f00;
+  background-image: linear-gradient(to bottom right, #486623, #3a6604);
 }
 
 .screen > p{
   font-size: 28px;
   font-weight: 900;
-  color: #fbfbfb;
+  color: #eeb600;
 }
