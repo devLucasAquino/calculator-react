@@ -8,6 +8,11 @@ export default function OnBoard({buttonSelected}){
                 <ol>
                     {row.map((number, colIndex) => <li key={colIndex}>           
                             <button className="onBoardButtons"
+                            style={{
+                                backgroundColor: number === '=' && '#a4ea4f',
+                                height: number === '=' && '8rem'
+
+                            }}
                             onClick={() => buttonSelected(rowIndex, colIndex)}>
                                 {number}
                             </button>
