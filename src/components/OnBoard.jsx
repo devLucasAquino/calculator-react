@@ -5,7 +5,7 @@ export default function OnBoard({buttonSelected}){
     return(
         <ol className="board">
             {rows.map((row, rowIndex) => <li key={rowIndex}>
-                <ol>
+                <ol className='boardFinalList'>
                     {row.map((number, colIndex) => <li key={colIndex}>           
                             <button className="onBoardButtons"
                             style={{

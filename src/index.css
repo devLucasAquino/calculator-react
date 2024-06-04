@@ -1,11 +1,3 @@
-li{
-  list-style: none;
-}
-
-ol{
-  gap: 2rem;
-}
-
 body{
   display: flex;
   align-items: center;
@@ -22,6 +14,7 @@ body{
   flex-direction: column;
   background-image: linear-gradient(to left top, #8c8c8c, #9d9d9d);
   border-radius: 10px;
+  padding-right: 3rem;
 }
 
 .board{
@@ -32,7 +25,14 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 10px;
+}
+
+.board li{
+  list-style: none;
+}
+
+.boardFinalList{
+  padding: 0;
 }
 
 .board button{
@@ -45,6 +45,7 @@ body{
   font-size: 2rem;
   border-radius: 5px;
   border: none;
+  margin: 10px;
 }
 
 .onBoardButtons:hover{

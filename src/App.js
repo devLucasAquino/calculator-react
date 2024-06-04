@@ -19,11 +19,24 @@ function App() {
       setExpression(expression.slice(0, -1));
 
     }else{
-      setExpression( (prevExpression) => {
-        const updatedExpression = [...prevExpression,value];
-        return updatedExpression;
+
+      if(value === 'mod'){
+
+        let str = expression + '';
+
+        let n = parseInt(str.replace(/,/g, ''))
+
+        setExpression(Math.abs(n))
+
         
-      });
+      }else{
+
+        setExpression( (prevExpression) => {
+          const updatedExpression = [...prevExpression,value];
+          return updatedExpression;
+
+        });
+      }
       
     }
   }
