@@ -16,7 +16,10 @@ function App() {
     let value = rows[rowIndex][colIndex];
 
     if(value === '<='){
-      setExpression(expression.slice(0, -1));
+
+      expression.length !== 0 ? 
+        setExpression(expression.slice(0, -1))
+        : setExpression('');
 
     }else{
 
