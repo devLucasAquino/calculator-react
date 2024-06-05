@@ -4,7 +4,6 @@ import ResultScreen from './components/ResultScreen';
 import { rows } from './data.jsx'
 
 import { useState } from 'react';
-import './App.css';
 
 
 
@@ -19,6 +18,12 @@ function App() {
 
       expression.length !== 0 ? 
         setExpression(expression.slice(0, -1)) : setExpression('');
+
+    }else if(value === '='){
+
+      const getExpression = expression.join(',');
+
+      setExpression(eval(getExpression.replace(/,/g, '')))
 
     }else{
 
