@@ -67,6 +67,7 @@ body{
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(to bottom right, #486623, #3a6604);
+  border-radius: 5px;
 }
 
 .screen > p{

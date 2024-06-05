@@ -18,28 +18,16 @@ function App() {
     if(value === '<='){
 
       expression.length !== 0 ? 
-        setExpression(expression.slice(0, -1))
-        : setExpression('');
+        setExpression(expression.slice(0, -1)) : setExpression('');
 
     }else{
-
-      if(value === 'mod'){
-
-        let str = expression + '';
-
-        let n = parseInt(str.replace(/,/g, ''))
-
-        setExpression(Math.abs(n))
-
-        
-      }else{
 
         setExpression( (prevExpression) => {
           const updatedExpression = [...prevExpression,value];
           return updatedExpression;
 
         });
-      }
+      
       
     }
   }
