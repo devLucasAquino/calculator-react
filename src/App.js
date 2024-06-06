@@ -21,9 +21,13 @@ function App() {
 
     }else if(value === '='){
 
-      const getExpression = expression.join(',');
+      if(expression.includes('%')){
+        expression.replace(/%/g, '*')
+      }
 
-      setExpression(eval(getExpression.replace(/,/g, '')))
+      const getExpression = expression.join(',');
+      setExpression([eval(getExpression.replace(/,/g, ''))])
+
 
     }else{
 
